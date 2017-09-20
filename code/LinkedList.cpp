@@ -1,4 +1,4 @@
-// LinkedList.cpp
+// LinkedList.cpp Jared Spaulding
 
 // tom bailey   0745  5 oct 2010
 // Definition of methods for the List class.
@@ -55,6 +55,25 @@ void List::insertAsFirst(double x)
 	first_ = new Node(x, first_);
 }
 
+void List::insertAsLast(double x)
+{
+	// Stack Overflow helped me with the method
+	Node * temp = new Node(x);
+	temp->entry_ = x;
+	temp->next_ = NULL;
+
+	if (empty()) 
+	{
+		insertAsFirst(x);
+	}
+	else 
+	{
+		Node * last_ = first_;
+		while (last_->next_) last_=last_->next_;
+		last_->next_ = temp;
+	}
+}
+
 
 double List::removeFirst()
 {
@@ -63,6 +82,29 @@ double List::removeFirst()
 	first_ = first_->next_;
 	delete tempPtr;
 	return item;
+}
+
+int List::getSize()
+{
+	int size = 0;
+	Node * iterator = first_;
+	while (iterator != NULL)
+	{
+		size++;
+		iterator = iterator->next_;
+	}
+	return size;
+}
+
+double List::getSum()
+{
+	double sum;
+	Node * iterator = first_;
+	while (iterator != NULL) 
+	{
+		sum += iterator->entry_;
+		iterator = iterator->next_;
+	}
 }
 
 

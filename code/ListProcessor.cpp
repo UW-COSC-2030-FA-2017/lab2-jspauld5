@@ -1,4 +1,4 @@
-// ListProcessor.cpp
+// ListProcessor.cpp Jared Spaulding
 
 // tom bailey   1540  30 sep 2011
 
@@ -45,6 +45,25 @@ int main()
 	cout << "cows list  :  " << cows << endl;
 	cout << "horses list:  " << horses << endl;
 	cout << "pigs list  :  " << pigs << endl << endl;
+
+	// test size method here
+	cout << "cows list size  :  " << cows.getSize() << endl;
+	cout << "horses list size:  " << horses.getSize() << endl;
+	cout << "pigs list size  :  " << pigs.getSize() << endl << endl;
+
+	// test sum method here
+	cout << "cows list sum  :  " << cows.getSum() << endl;
+	cout << "horses list sum:  " << horses.getSum() << endl;
+	cout << "pigs list sum  :  " << pigs.getSum() << endl << endl;
+
+	// test insetAtlast here
+	cows.insertAsLast(4.45);
+	horses.insertAsLast(2.98);
+	pigs.insertAsLast(12.23);
+	cout << "cows list  :  " << cows << endl;
+	cout << "horses list:  " << horses << endl;
+	cout << "pigs list  :  " << pigs << endl << endl;
+
 
 	cout << "End of code" << endl;
 

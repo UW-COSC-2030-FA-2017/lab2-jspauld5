@@ -1,4 +1,4 @@
-// LinkedList.h
+// LinkedList.h Jared Spaulding
 
 // tom bailey   0740  5 oct 2010
 // Declaration of the List class.
@@ -54,6 +54,11 @@ public:
 	//         outfile.
 	void print(ostream & outfile) const;
 
+	// post: returns integer size of list
+	int getSize();
+
+	// post: returns sum of list as double
+	double getSum();
 
 	//*** Mutators ***
 
@@ -65,6 +70,10 @@ public:
 	// post: the first double in this List has been removed
 	//         from this List and has been returned.
 	double removeFirst();
+
+	// post: x has been added as the last double in this
+	// 		   List
+	void insertAsLast(double x);
 
 private:
 	//*** Inaccessible standard functions ***
@@ -80,7 +89,6 @@ private:
 
 private:
 	Node * first_;
-
 };
 
 
